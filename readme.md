@@ -8,8 +8,8 @@ A simple Laravel-package to write a deploy file to your storage path. This file 
 
 ## Installation
 
-```
-composer require "olssonm\deploy" 1.*
+```bash
+$ composer require "olssonm\deploy^1.0"
 ```
 
 Only tested for Laravel => 5.5 but should work with any version of Laravel higher than 5.1. This package does require PHP >= 7.0 however.
@@ -18,19 +18,25 @@ Only tested for Laravel => 5.5 but should work with any version of Laravel highe
 
 `olssonm\deploy` comes with a set of Artisan-command that you can use straight out of the box:
 
-```php
-php artisan deploy:make
+#### deploy:make
+
+```bash
+$ php artisan deploy:make
 // Deployed @ 2017-12-02 09:22:11
 ```
 
 Writes the deployment-file for inspection and timekeeping. Per default the file is located in your `storagepath/app/deploy.txt`.
 
-```php
-php artisan deploy:when
+#### deploy:when
+
+```bash
+$ php artisan deploy:when
 // Last deploy occurred @ 2017-12-02 09:22:11
 ```
 
 Displays the time and date of the last deploy.
+
+#### In app
 
 You can also use the `Olssonm\Deploy\Deploy`-class for other more custom functions.
 
@@ -65,13 +71,13 @@ Pro tip: if you are using a custom deploy routine where you run `composer instal
 
 ## Testing
 
-``` bash
+```bash
 $ composer test
 ```
 
 or
 
-``` bash
+```bash
 $ phpunit
 ```
 

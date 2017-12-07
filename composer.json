@@ -1,0 +1,56 @@
+{
+    "name": "olssonm/deploy",
+    "description": "Mark app as deployed and check when the last deployment occured.",
+    "keywords": [
+        "olssonm",
+        "deploy",
+        "build",
+        "Laravel 5"
+    ],
+    "homepage": "https://github.com/olssonm/deploy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcus Olsson",
+            "email": "contact@marcusolsson.me",
+            "homepage": "https://marcusolsson.me"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.2|^5.3|^5.4|^5.5",
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=6.0",
+        "orchestra/testbench": ">=3.2",
+        "orchestra/testbench-browser-kit": ">=3.2",
+        "composer/composer": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Olssonm\\Deploy\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Olssonm\\Deploy\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Olssonm\\Deploy\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "sort-packages": true,
+    "optimize-autoloader": true
+}

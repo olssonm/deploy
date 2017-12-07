@@ -32,6 +32,6 @@ class DeployWhenCommand extends Command
 
     public function handle(Deploy $deploy)
     {
-        return $this->info('Last deploy occurred @ ' . $deploy->when() . PHP_EOL);
+        return $this->info('Last deploy occurred @ ' . $deploy->when());
     }
 }

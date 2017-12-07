@@ -12,7 +12,15 @@ A simple Laravel-package to write a deploy file to your storage path. This file 
 $ composer require "olssonm\deploy^1.0"
 ```
 
-Only tested for Laravel => 5.5 but should work with any version of Laravel higher than 5.1. This package does require PHP >= 7.0 however.
+Only tested for Laravel >= 5.5 but should work with any version of Laravel higher than 5.1. This package does require PHP >= 7.0 however.
+
+The package will be auto-discovered in Laravel >= 5.5, else you can add it to your providers array (`config/app.php`):
+
+```php
+'providers' => [
+    Olssonm\Deploy\ServiceProvider::class
+]
+```
 
 ## Usage
 

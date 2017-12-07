@@ -28,7 +28,7 @@ class Deploy
     public function make(string $message = null): bool
     {
         if (!$message) {
-            $message = 'Deployed @ ' . Carbon::now()->format('Y-m-d') . PHP_EOL;
+            $message = 'Deployed @ ' . Carbon::now()->format('Y-m-d H:i:s') . PHP_EOL;
         }
 
         return $this->exists = File::append($this->path, $message);

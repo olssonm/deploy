@@ -42,7 +42,7 @@ class DeployTest extends \Orchestra\Testbench\BrowserKit\TestCase {
 		$this->assertTrue($deploy->make());
 		$this->assertTrue(get_class($deploy->when()) == 'Carbon\Carbon');
 
-		self::clean();
+		// self::clean();
 	}
 
 	/**
@@ -123,7 +123,7 @@ class DeployTest extends \Orchestra\Testbench\BrowserKit\TestCase {
 	 */
 	public static function tearDownAfterClass()
 	{
-		self::clean();
+		// self::clean();
 		parent::tearDownAfterClass();
 	}
 

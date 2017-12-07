@@ -35,6 +35,6 @@ class DeployMakeCommand extends Command
     {
         $deploy->make();
 
-        return $this->info('Deployed @ ' . Carbon::now()->format('Y-m-d H:i:s') . PHP_EOL);
+        return $this->info('Deployed @ ' . Carbon::now()->format('Y-m-d H:i:s'));
     }
 }

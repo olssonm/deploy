@@ -4,9 +4,6 @@ use Illuminate\Console\Command;
 use Illuminate\Console\Scheduling\Schedule;
 use Olssonm\Deploy\Deploy;
 
-/**
- *
- */
 class DeployWhenCommand extends Command
 {
     /**

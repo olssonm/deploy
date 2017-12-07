@@ -22,6 +22,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         ]);
     }
 
+    /**
+     * Register any package services.
+     *
+     * @return void
+     */
     public function register()
     {
         $this->app->singleton('deploy', function () {
@@ -31,6 +36,10 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->app->alias('deploy', Deploy::class);
     }
 
+    /**
+     * Get the services provided by the provider.
+     * @return array
+     */
     public function provides()
     {
         return [

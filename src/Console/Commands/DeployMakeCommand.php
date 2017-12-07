@@ -5,9 +5,6 @@ use Illuminate\Console\Scheduling\Schedule;
 use Olssonm\Deploy\Deploy;
 use Carbon\Carbon;
 
-/**
- *
- */
 class DeployMakeCommand extends Command
 {
     /**

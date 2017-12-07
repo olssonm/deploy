@@ -9,7 +9,7 @@ A simple Laravel-package to write a deploy file to your storage path. This file 
 ## Installation
 
 ```bash
-$ composer require "olssonm\deploy^1.0"
+$ composer require "olssonm/deploy:^1.0"
 ```
 
 Only tested for Laravel >= 5.5 but should work with any version of Laravel higher than 5.1. This package does require PHP >= 7.0 however.
@@ -65,6 +65,13 @@ public function when(Deploy $deploy)
 {
     return $deploy->when();
 }
+```
+
+Or via the facade (register `Olssonm\Deploy\Facades\Deploy::class` in your `aliases`-array) or app singleton;
+
+```php
+    app('deploy')->when()->format('Y-m-d'); // App singleton
+    Deploy::when()->format('Y-m-d'); // Via an alias
 ```
 
 Pro tip: if you are using a custom deploy routine where you run `composer install` you can add `php artisan deploy:make` to your list of `post-install-cmd`-commands to automatically fire the command:

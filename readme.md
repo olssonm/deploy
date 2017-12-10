@@ -70,8 +70,8 @@ public function when(Deploy $deploy)
 Or via the facade (register `Olssonm\Deploy\Facades\Deploy::class` in your `aliases`-array) or app singleton;
 
 ```php
-    app('deploy')->when()->format('Y-m-d'); // App singleton
-    Deploy::when()->format('Y-m-d'); // Via an alias
+app('deploy')->when()->format('Y-m-d'); // App singleton
+Deploy::when()->format('Y-m-d'); // Via an alias
 ```
 
 Pro tip: if you are using a custom deploy routine where you run `composer install` you can add `php artisan deploy:make` to your list of `post-install-cmd`-commands to automatically fire the command:

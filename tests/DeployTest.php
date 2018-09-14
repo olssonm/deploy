@@ -51,7 +51,7 @@ class DeployTest extends \Orchestra\Testbench\BrowserKit\TestCase {
 	 */
 	public function testCommandsVisible()
 	{
-		Artisan::call('');
+		Artisan::call('list');
 		$output = Artisan::output();
 
 		$test1 = false;

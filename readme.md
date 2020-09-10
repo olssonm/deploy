@@ -4,6 +4,14 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 
+---
+
+### ⚠️ This project is abandoned!
+
+Due to low usage this project is currently abandoned and hasn't been updated since Laravel 5.2. 
+
+---
+
 A simple Laravel-package to write a deploy file to your storage path. This file can then be used to check when the last deploy occurred. Useful for both debugging purposes and if you need to keep track of builds, updates etc.
 
 ## Installation
